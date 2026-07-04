@@ -37,8 +37,11 @@ def get_db():
 
 
 async def init_db():
-    Base.metadata.create_all(bind=engine)
-    logger.info("Database initialized")
+    try:
+        Base.metadata.create_all(bind=engine)
+        logger.info("Database initialized")
+    except Exception as e:
+        logger.info(f"Database already initialized or error: {e}")
 
 
 async def close_db():
