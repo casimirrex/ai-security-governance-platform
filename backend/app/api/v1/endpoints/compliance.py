@@ -1,8 +1,8 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import get_db
-from security_modules.compliance.service import ComplianceService
 from pydantic import BaseModel
+from app.database import get_db
+from app.security_modules.compliance.service import ComplianceService
 
 router = APIRouter()
 

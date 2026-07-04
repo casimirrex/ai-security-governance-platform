@@ -1,10 +1,10 @@
 import logging
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from database import get_db
-from security_modules.risk_assessment.service import RiskAssessmentService
-from security_modules.risk_assessment.models import SecurityRiskAssessment, AIModel
 from pydantic import BaseModel
+from app.database import get_db
+from app.security_modules.risk_assessment.service import RiskAssessmentService
+from app.security_modules.risk_assessment.models import SecurityRiskAssessment, AIModel
 
 router = APIRouter()
 logger = logging.getLogger(__name__)

@@ -2,7 +2,7 @@ import logging
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, declarative_base
 from sqlalchemy.pool import NullPool, QueuePool
-from config import get_settings
+from app.config import get_settings
 
 settings = get_settings()
 logger = logging.getLogger(__name__)

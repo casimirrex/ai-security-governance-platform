@@ -1,6 +1,6 @@
 import logging
 from sqlalchemy.orm import Session
-from .models import ComplianceCheck, ComplianceFramework
+from app.security_modules.compliance.models import ComplianceCheck, ComplianceFramework
 
 logger = logging.getLogger(__name__)
 

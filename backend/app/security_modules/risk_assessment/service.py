@@ -1,8 +1,7 @@
 import logging
-import numpy as np
 from datetime import datetime
 from sqlalchemy.orm import Session
-from .models import SecurityRiskAssessment, VulnerabilityFinding, AIModel
+from app.security_modules.risk_assessment.models import SecurityRiskAssessment, VulnerabilityFinding, AIModel
 
 logger = logging.getLogger(__name__)
 

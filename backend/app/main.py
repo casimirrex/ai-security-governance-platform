@@ -5,9 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from prometheus_client import make_asgi_app
 
-from config import get_settings
-from database import init_db, close_db
-from api.v1 import api_router
+from app.config import get_settings
+from app.database import init_db, close_db
+from app.api.v1 import api_router
 
 settings = get_settings()
 logger = logging.getLogger(__name__)
